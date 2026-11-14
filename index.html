@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>مدرسة وروضة المواكب الحديثة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>مدرسة وروضة المواكب الحديثة</h1>
+        <p>نحو جيل مبدع ومتميز</p>
+
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#about">من نحن</a>
+            <a href="#education">المراحل التعليمية</a>
+            <a href="#activities">الأنشطة</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>أهلاً وسهلاً بكم في مدرستنا</h2>
+        <p>بيئة تعليمية تجمع بين العلم والإبداع والأخلاق</p>
+
+        <button onclick="showMessage()">اكتشف مدرستنا</button>
+
+        <p id="message"></p>
+    </section>
+
+    <section id="about">
+        <h2>من نحن؟</h2>
+        <p>
+            مدرسة وروضة المواكب الحديثة مؤسسة تعليمية
+            في عمّان، تهتم بالتعليم وتنمية مهارات الطلبة
+            وتشجيعهم على الإبداع والتميز.
+        </p>
+    </section>
+
+    <section id="education">
+        <h2>المراحل التعليمية</h2>
+
+        <div class="container">
+
+            <div class="card">
+                <h3>الروضة</h3>
+                <p>التعلم واللعب وتنمية مهارات الأطفال.</p>
+            </div>
+
+            <div class="card">
+                <h3>المرحلة الأساسية</h3>
+                <p>تطوير مهارات الطلبة وبناء المعرفة.</p>
+            </div>
+
+            <div class="card">
+                <h3>المرحلة الثانوية</h3>
+                <p>الاستعداد للمستقبل وتحقيق النجاح.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="activities">
+        <h2>أنشطتنا المدرسية</h2>
+        <p>الأنشطة الرياضية والثقافية والدينية والفنية.</p>
+        <p>نؤمن بأن التعلم لا يقتصر على الكتب فقط!</p>
+    </section>
+
+    <section id="contact">
+        <h2>تواصل معنا</h2>
+        <p>عمّان - الأردن</p>
+        <p>هاتف: 06 438 1596</p>
+    </section>
+
+    <footer>
+        <p>مدرسة وروضة المواكب الحديثة</p>
+        <p>جميع الحقوق محفوظة ©️ 2026</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            let message = document.getElementById("message");
+
+            if (message.innerHTML == "") {
+                message.innerHTML =
+                "يسعدنا وجودكم معنا في مدرسة المواكب الحديثة!";
+            } else {
+                message.innerHTML = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

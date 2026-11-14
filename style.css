@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf6f7;
+    text-align: center;
+}
+
+/* الهيدر */
+header {
+    background-color: #641C35;
+    color: white;
+    padding: 25px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #E8BFCB;
+}
+
+/* الصفحة الرئيسية */
+.hero {
+    background-color: #F1DFE5;
+    padding: 50px 20px;
+    color: #641C35;
+}
+
+button {
+    background-color: #641C35;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #922D50;
+}
+
+/* الأقسام */
+section {
+    padding: 35px 20px;
+}
+
+h2 {
+    color: #641C35;
+}
+
+/* البطاقات */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #E8D5DC;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* أسفل الصفحة */
+footer {
+    background-color: #641C35;
+    color: white;
+    padding: 15px;
+}
