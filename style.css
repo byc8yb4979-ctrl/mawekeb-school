@@ -1,88 +1,246 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #faf6f7;
-    text-align: center;
+:root {
+    --maroon: #6E1216;
+    --maroon-dark: #4F0B0E;
+    --gold: #B09335;
+    --gold-light: #C8AB4A;
+    --cream: #FAF8F3;
+    --cream-soft: #F3EFE4;
+    --white: #FFFFFF;
+    --text-dark: #2B2121;
+    --text-muted: #5C524E;
 }
 
-/* الهيدر */
-header {
-    background-color: #641C35;
-    color: white;
-    padding: 25px;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* الهيدر واللوقو */
+.site-header {
+    background-color: var(--maroon);
+    color: var(--white);
+    border-bottom: 4px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 14px 28px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+.school-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 1.45rem;
+    color: var(--white);
+}
+
+.brand-text p {
+    margin: 4px 0 0;
+    font-size: 0.92rem;
+    color: var(--gold-light);
 }
 
 nav {
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    margin: 10px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 nav a:hover {
-    color: #E8BFCB;
+    background-color: var(--maroon-dark);
+    border-color: var(--gold);
 }
 
-/* الصفحة الرئيسية */
+/* قسم الرئيسية */
 .hero {
-    background-color: #F1DFE5;
+    background: linear-gradient(135deg, var(--maroon-dark) 0%, var(--maroon) 100%);
+    color: var(--white);
+    border-bottom: 4px solid var(--gold);
     padding: 50px 20px;
-    color: #641C35;
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+
+.hero h2 {
+    color: var(--gold-light);
+    margin-top: 0;
+}
+
+.hero p {
+    color: var(--cream-soft);
 }
 
 button {
-    background-color: #641C35;
-    color: white;
+    background-color: var(--gold);
+    color: var(--maroon-dark);
     border: none;
-    padding: 12px 25px;
-    border-radius: 6px;
+    padding: 11px 22px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    border-radius: 6px;
+    margin-top: 15px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 button:hover {
-    background-color: #922D50;
+    background-color: var(--gold-light);
+    transform: translateY(-1px);
+}
+
+#message {
+    margin-top: 14px;
+    font-weight: bold;
+    color: var(--gold-light);
 }
 
 /* الأقسام */
 section {
-    padding: 35px 20px;
+    padding: 32px 24px;
+    max-width: 1000px;
+    margin: 22px auto;
+    background: var(--white);
+    border: 1px solid #E5DEC9;
+    border-right: 5px solid var(--maroon);
+    border-radius: 10px;
 }
 
-h2 {
-    color: #641C35;
+section h2 {
+    margin-top: 0;
+    color: var(--maroon);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 6px;
+    display: inline-block;
 }
 
-/* البطاقات */
+/* بطاقات المراحل التعليمية */
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 16px;
 }
 
 .card {
-    background-color: white;
-    width: 220px;
+    background: var(--cream-soft);
+    border: 1px solid #DFD5B8;
+    border-top: 4px solid var(--gold);
     padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #E8D5DC;
-    transition: 0.3s;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card h3 {
+    margin-top: 0;
+    color: var(--maroon);
 }
 
-/* أسفل الصفحة */
+/* روابط التواصل والفوتر */
+.social-link {
+    color: var(--maroon);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
 footer {
-    background-color: #641C35;
-    color: white;
-    padding: 15px;
+    background-color: var(--maroon-dark);
+    color: var(--white);
+    border-top: 4px solid var(--gold);
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 32px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .social-link {
+    color: var(--gold-light);
+}
+
+/* استجابة للهواتف */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    section {
+        margin: 16px 12px;
+        padding: 22px 16px;
+    }
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  display: block;
 }
